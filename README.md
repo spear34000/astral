@@ -1,6 +1,6 @@
-# Nova Bot 개발 레퍼런스
+# Astral Bot 개발 레퍼런스
 
-Nova는 JavaScript 또는 Python으로 메신저 봇을 개발하고 실행할 수 있는 Android 기반 플랫폼입니다.
+Astral는 JavaScript 또는 Python으로 메신저 봇을 개발하고 실행할 수 있는 Android 기반 플랫폼입니다.
 
 ## 1. 봇 API (Python)
 
@@ -36,7 +36,45 @@ Nova는 JavaScript 또는 Python으로 메신저 봇을 개발하고 실행할 �
 
 - **`ctx.is_group_chat`**: 그룹 채팅 여부 (불리언).
 
-## 2. 패키지 관리
+## 2. 봇 API (Node.js)
+
+Node.js 환경에서는 `bot`, `device`, `botManager` 등의 전역 객체를 사용하여 봇을 제어합니다.
+
+### `bot` 객체
+
+- **`bot.command(name, handler)`**: 명령어를 등록합니다.
+  - `name` (string | string[]): 명령어 이름.
+  - `handler` (function): 명령 수신 시 실행될 함수. `Context` 객체를 인자로 받습니다.
+
+- **`bot.on(event, handler)`**: `"message"` 등 특정 이벤트 핸들러를 등록합니다.
+
+- **`bot.prefix(prefixes)`**: 명령어 접두사를 설정합니다. (기본값: `["!", "/"]`)
+
+### `device` 객체
+
+- **`device.toast(message)`**: 기기에 토스트 메시지를 띄웁니다.
+- **`device.vibrate(duration)`**: 지정된 시간(ms)만큼 기기를 진동시킵니다.
+- **`device.notification(title, body)`**: 기기에 알림을 보냅니다.
+
+### `Context` 객체
+
+핸들러 함수에 전달되는 `Context` 객체는 다음과 같은 속성과 메소드를 가집니다.
+
+- **`reply(message)`**: 현재 채팅방으로 응답 메시지를 보냅니다.
+- **`msg` / `message`**: 수신된 메시지 내용.
+- **`sender`**: 발신자 이름.
+- **`room`**: 채팅방 이름.
+- **`isGroupChat`**: 그룹 채팅 여부 (boolean).
+
+### `botManager` 모듈 (권장)
+
+`require('botManager')`를 통해 더 명시적으로 봇 로직을 구성할 수 있습니다.
+
+- **`botManager.onMessage(handler)`**: 모든 메시지를 처리할 기본 핸들러를 등록합니다.
+- **`botManager.onCommand(name, handler)`**: 명령어를 등록합니다.
+- **`botManager.setPrefix(prefixes)`**: 접두사를 설정합니다.
+
+## 3. 패키지 관리
 
 Python 봇 개발 시 필요한 외부 라이브러리는 `pip`를 사용하여 터미널에서 직접 설치할 수 있습니다. Nova는 자동으로 가상환경(`venv`)을 구성하므로, 별도의 활성화 과정 없이 바로 `pip` 명령을 사용하면 됩니다.
 
@@ -45,13 +83,14 @@ Python 봇 개발 시 필요한 외부 라이브러리는 `pip`를 사용하여 
 pip install requests
 ```
 
-## 3. 기본 예제 코드
+## 4. 기본 예제 코드
 
-다음은 `!ping` 명령에 `pong!`으로 응답하고, 모든 메시지를 로그로 출력하는 간단한 예제입니다.
+다음은 각 언어별로 `!ping` 명령에 `pong!`으로 응답하고 모든 메시지를 로그로 출력하는 간단한 예제입니다.
+
+### Python
 
 ```python
 # bot 객체는 코드 실행 시 자동으로 생성되어 있습니다.
-
 def handle_ping(ctx):
     ctx.reply("pong!")
 
@@ -66,4 +105,26 @@ bot.on("message", log_message)
 
 # 접두사를 '#'으로만 사용하고 싶을 때
 # bot.prefix("#")
+```
+
+### Node.js
+
+```javascript
+// botManager 모듈을 사용하는 것을 권장합니다.
+const botManager = require('botManager');
+
+function handlePing(ctx) {
+    ctx.reply('pong!');
+}
+
+botManager.onCommand('ping', handlePing);
+
+function logMessage(ctx) {
+    console.log(`[${ctx.room}] ${ctx.sender}: ${ctx.msg}`);
+}
+
+botManager.onMessage(logMessage);
+
+// 접두사를 '#'으로만 사용하고 싶을 때
+// botManager.setPrefix('#');
 ```
