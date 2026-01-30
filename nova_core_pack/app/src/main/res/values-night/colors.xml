@@ -1,0 +1,35 @@
+<resources>
+    <!-- Astral Dark System (dark/gray/blue) -->
+    <color name="astral_bg">#0F1114</color>
+    <color name="astral_surface">#171A1F</color>
+    <color name="astral_surface_variant">#222831</color>
+    <color name="astral_card">#171A1F</color>
+    <color name="astral_border">#2A313B</color>
+
+    <color name="astral_text">#E7EAF0</color>
+    <color name="astral_text_dim">#A0A8B5</color>
+
+    <!-- Accents -->
+    <color name="astral_primary">#3B78FF</color>
+    <color name="astral_secondary">#4A90FF</color>
+    <color name="astral_success">#2ACB9D</color>
+    <color name="astral_error">#FF6B6B</color>
+
+    <!-- Navigation -->
+    <color name="astral_nav_bg">#171A1F</color>
+
+    <!-- M3 Mapping -->
+    <color name="primary">@color/astral_primary</color>
+    <color name="onPrimary">#08111D</color>
+    <color name="secondary">@color/astral_secondary</color>
+    <color name="tertiary">#8FB2FF</color>
+    <color name="background">@color/astral_bg</color>
+    <color name="surface">@color/astral_surface</color>
+    <color name="onSurface">@color/astral_text</color>
+    <color name="surfaceVariant">@color/astral_surface_variant</color>
+    <color name="onSurfaceVariant">@color/astral_text_dim</color>
+
+    <!-- Legacy Support -->
+    <color name="astral_neon_cyan">#3B78FF</color>
+    <color name="astral_neon_pink">#4A90FF</color>
+</resources>

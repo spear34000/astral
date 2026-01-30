@@ -1,0 +1,31 @@
+<resources>
+    <style name="Theme.Astral" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="android:statusBarColor">@color/astral_bg</item>
+        <item name="android:navigationBarColor">@color/astral_bg</item>
+        <item name="android:windowBackground">@color/astral_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- BottomSheet style -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Astral.BottomSheetDialog</item>
+    </style>
+
+    <style name="ThemeOverlay.Astral.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Style.Astral.BottomSheet</item>
+    </style>
+
+    <style name="Style.Astral.BottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="backgroundTint">@color/astral_surface</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Astral.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.Astral.BottomSheet" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+    </style>
+</resources>

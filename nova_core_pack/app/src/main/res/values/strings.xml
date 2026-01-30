@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Astral</string>
+    <string name="permission_title">알림 접근 권한 필요</string>
+    <string name="permission_desc">카카오톡 알림을 읽고 답장하려면 ‘알림 접근’을 켜야 해요.</string>
+    <string name="open_settings">설정 열기</string>
+    <string name="save">저장</string>
+    <string name="logs">로그</string>
+</resources>
+

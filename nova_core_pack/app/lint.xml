@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+  <!-- Ignore problematic libtalloc copyright file that triggers lintVitalAnalyzeRelease -->
+  <ignore path="assets/userland/data/data/com.termux/files/usr/share/doc/libtalloc/copyright" />
+</lint>
