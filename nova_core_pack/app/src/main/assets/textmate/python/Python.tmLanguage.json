@@ -1,0 +1,273 @@
+{
+  "name": "Python",
+  "scopeName": "source.python",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#fstrings" },
+    { "include": "#def-kw" },
+    { "include": "#decorators" },
+    { "include": "#functions" },
+    { "include": "#function-calls" },
+    { "include": "#classes" },
+    { "include": "#imports" },
+    { "include": "#types" },
+    { "include": "#keywords" },
+    { "include": "#constants" },
+    { "include": "#properties" },
+    { "include": "#numbers" },
+    { "include": "#operators" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.python",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.python",
+          "begin": "\"\"\"",
+          "end": "\"\"\""
+        },
+        {
+          "name": "string.quoted.single.python",
+          "begin": "'''",
+          "end": "'''"
+        },
+        {
+          "name": "string.quoted.double.python",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape.python", "match": "\\\\." }
+          ]
+        },
+        {
+          "name": "string.quoted.single.python",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            { "name": "constant.character.escape.python", "match": "\\\\." }
+          ]
+        }
+      ]
+    },
+    "fstrings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.python",
+          "begin": "(?i)f\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape.python", "match": "\\\\." },
+            {
+              "name": "meta.interpolation.python",
+              "begin": "\\{",
+              "end": "\\}",
+              "patterns": [
+                { "include": "$self" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.python",
+          "begin": "(?i)f'",
+          "end": "'",
+          "patterns": [
+            { "name": "constant.character.escape.python", "match": "\\\\." },
+            {
+              "name": "meta.interpolation.python",
+              "begin": "\\{",
+              "end": "\\}",
+              "patterns": [
+                { "include": "$self" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.declaration.python",
+          "match": "\\b(def|class)\\b"
+        },
+        {
+          "name": "keyword.control.python",
+          "match": "\\b(if|elif|else|for|while|break|continue|return|try|except|finally|raise|with|as|pass|yield|lambda|class|def|and|or|not|in|is|async|await|global|nonlocal|assert|del)\\b"
+        },
+        {
+          "name": "constant.language.python",
+          "match": "\\b(True|False|None)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "meta.function.definition.python",
+          "match": "\\b(async)\\s+(def)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([^)]*)\\)",
+          "captures": {
+            "1": { "name": "keyword.control.python" },
+            "2": { "name": "keyword.declaration.python" },
+            "3": { "name": "entity.name.function.python" },
+            "4": { "name": "variable.parameter.function.python" }
+          }
+        },
+        {
+          "name": "meta.function.definition.python",
+          "match": "\\b(def)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([^)]*)\\)",
+          "captures": {
+            "1": { "name": "keyword.declaration.python" },
+            "2": { "name": "entity.name.function.python" },
+            "3": { "name": "variable.parameter.function.python" }
+          }
+        }
+      ]
+    },
+    "function-calls": {
+      "patterns": [
+        {
+          "name": "support.function.python",
+          "match": "\\b(onMessage|onCommand|setPrefix|reply)\\b"
+        },
+        {
+          "name": "entity.name.function.python",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()"
+        }
+      ]
+    },
+    "classes": {
+      "patterns": [
+        {
+          "name": "meta.class.definition.python",
+          "match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s*\\(([^)]*)\\))?",
+          "captures": {
+            "1": { "name": "keyword.declaration.python" },
+            "2": { "name": "entity.name.type.class.python" },
+            "3": { "name": "support.type.python" }
+          }
+        }
+      ]
+    },
+    "imports": {
+      "patterns": [
+        {
+          "name": "keyword.control.import.python",
+          "match": "\\b(import|from|as)\\b"
+        },
+        {
+          "name": "entity.name.namespace.python",
+          "match": "\\bfrom\\s+([A-Za-z_][A-Za-z0-9_]*)(?=\\s+import)"
+        },
+        {
+          "name": "entity.name.namespace.python",
+          "match": "\\bimport\\s+([A-Za-z_][A-Za-z0-9_]*)(?=\\s|$)"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.python",
+          "match": "\\b(Any|Optional|Union|Literal|Final|ClassVar|Type|TypeVar|Generic|Protocol|Callable|Iterable|Iterator|Sequence|Mapping|MutableMapping|List|Dict|Tuple|Set|FrozenSet|Deque|DefaultDict|Counter|OrderedDict|Coroutine|Awaitable)\\b"
+        },
+        {
+          "name": "support.type.python",
+          "match": "\\b(int|str|float|bool|bytes|bytearray|complex|object|None)\\b"
+        },
+        {
+          "name": "support.type.python",
+          "match": "\\b([A-Z][A-Za-z0-9_]*)\\b"
+        },
+        {
+          "name": "support.type.python",
+          "match": "(?<=->\\s)([A-Za-z_][A-Za-z0-9_\\[\\], ]*)"
+        },
+        {
+          "name": "support.type.python",
+          "match": "(?<=:)\\s*([A-Za-z_][A-Za-z0-9_\\[\\], ]*)"
+        }
+      ]
+    },
+    "decorators": {
+      "patterns": [
+        {
+          "name": "entity.name.function.decorator.python",
+          "match": "@[A-Za-z_][A-Za-z0-9_]*"
+        },
+        {
+          "name": "entity.name.function.decorator.python",
+          "match": "@dataclass"
+        }
+      ]
+    },
+    "def-kw": {
+      "patterns": [
+        {
+          "name": "storage.type.function.python",
+          "match": "\\bdef\\b"
+        },
+        {
+          "name": "storage.type.function.python",
+          "match": "\\basync\\s+def\\b"
+        },
+        {
+          "name": "storage.type.class.python",
+          "match": "\\bclass\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "support.constant.python",
+          "match": "\\b(list|dict|set|tuple|str|int|float|bool|len|range|print|open|type|isinstance|super|staticmethod|classmethod|property)\\b"
+        }
+      ]
+    },
+    "properties": {
+      "patterns": [
+        {
+          "name": "variable.other.property.python",
+          "match": "\\.([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "variable.other.property.python" }
+          }
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.python",
+          "match": "\\b(0x[0-9a-fA-F]+|0b[01]+|0o[0-7]+|\\d+(\\.\\d+)?)(j)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.python",
+          "match": "(==|!=|<=|>=|=|\\+|\\-|\\*|/|//|%|\\*\\*|\\+=|\\-=|\\*=|/=|//=|%=|\\^|\\||&|~)"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.python",
+          "match": "[\\[\\]{}().,;:]"
+        }
+      ]
+    }
+  }
+}

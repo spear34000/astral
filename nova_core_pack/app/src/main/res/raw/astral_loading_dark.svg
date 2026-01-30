@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 320"
+     fill="none">
+  <g>
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 128 108"
+      to="360 128 108"
+      dur="1.6s"
+      repeatCount="indefinite"/>
+
+    <ellipse cx="128" cy="108"
+             rx="84" ry="38"
+             transform="rotate(-20 128 108)"
+             stroke="#3FA9F5"
+             stroke-width="6"
+             stroke-linecap="round"/>
+  </g>
+
+  <circle cx="128" cy="108"
+          r="28"
+          fill="#1F7ED6"/>
+
+  <path d="M128 80
+           a28 28 0 1 1 0 56
+           a20 28 0 1 0 0 -56z"
+        fill="#0B4F8A"
+        opacity="0.95"/>
+
+  <circle cx="120" cy="100"
+          r="10"
+          fill="#8ED6FF"
+          opacity="0.35"/>
+
+  <text x="128" y="250"
+        text-anchor="middle"
+        font-size="26"
+        font-weight="600"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        fill="#B7E6FF">
+    로딩중
+  </text>
+</svg>

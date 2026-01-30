@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme.Astral" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="android:statusBarColor">@color/astral_bg</item>
+        <item name="android:navigationBarColor">@color/astral_bg</item>
+        <item name="android:windowBackground">@color/astral_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Astral.BottomSheetDialog</item>
+    </style>
+</resources>

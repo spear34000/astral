@@ -1,0 +1,18 @@
+<svg width="1024" height="512" viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#2F6BFF" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 64 H1024"/>
+    <path d="M0 128 H1024"/>
+    <path d="M0 192 H1024"/>
+    <path d="M0 256 H1024"/>
+    <path d="M0 320 H1024"/>
+    <path d="M0 384 H1024"/>
+    <path d="M0 448 H1024"/>
+    <path d="M128 0 V512"/>
+    <path d="M256 0 V512"/>
+    <path d="M384 0 V512"/>
+    <path d="M512 0 V512"/>
+    <path d="M640 0 V512"/>
+    <path d="M768 0 V512"/>
+    <path d="M896 0 V512"/>
+  </g>
+</svg>

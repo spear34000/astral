@@ -1,0 +1,300 @@
+﻿Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with ExtractAarTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarResourcesCompilerTransform
+Transforming viewpager2-1.0.0.aar (androidx.viewpager2:viewpager2:1.0.0) with ExtractAarTransform
+Transforming viewpager2-1.0.0.aar (androidx.viewpager2:viewpager2:1.0.0) with AarResourcesCompilerTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with ExtractAarTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarResourcesCompilerTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with ExtractAarTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarResourcesCompilerTransform
+Transforming activity-1.9.3.aar (androidx.activity:activity:1.9.3) with ExtractAarTransform
+Transforming activity-1.9.3.aar (androidx.activity:activity:1.9.3) with AarResourcesCompilerTransform
+Transforming activity-ktx-1.9.3.aar (androidx.activity:activity-ktx:1.9.3) with ExtractAarTransform
+Transforming activity-ktx-1.9.3.aar (androidx.activity:activity-ktx:1.9.3) with AarResourcesCompilerTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with ExtractAarTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarResourcesCompilerTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with ExtractAarTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarResourcesCompilerTransform
+Transforming drawerlayout-1.1.1.aar (androidx.drawerlayout:drawerlayout:1.1.1) with ExtractAarTransform
+Transforming drawerlayout-1.1.1.aar (androidx.drawerlayout:drawerlayout:1.1.1) with AarResourcesCompilerTransform
+Transforming coordinatorlayout-1.1.0.aar (androidx.coordinatorlayout:coordinatorlayout:1.1.0) with ExtractAarTransform
+Transforming coordinatorlayout-1.1.0.aar (androidx.coordinatorlayout:coordinatorlayout:1.1.0) with AarResourcesCompilerTransform
+Transforming transition-1.5.0.aar (androidx.transition:transition:1.5.0) with ExtractAarTransform
+Transforming transition-1.5.0.aar (androidx.transition:transition:1.5.0) with AarResourcesCompilerTransform
+Transforming dynamicanimation-1.0.0.aar (androidx.dynamicanimation:dynamicanimation:1.0.0) with ExtractAarTransform
+Transforming dynamicanimation-1.0.0.aar (androidx.dynamicanimation:dynamicanimation:1.0.0) with AarResourcesCompilerTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarResourcesCompilerTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarResourcesCompilerTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarResourcesCompilerTransform
+Transforming legacy-support-core-utils-1.0.0.aar (androidx.legacy:legacy-support-core-utils:1.0.0) with ExtractAarTransform
+Transforming legacy-support-core-utils-1.0.0.aar (androidx.legacy:legacy-support-core-utils:1.0.0) with AarResourcesCompilerTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with ExtractAarTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarResourcesCompilerTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with ExtractAarTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarResourcesCompilerTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with ExtractAarTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarResourcesCompilerTransform
+Transforming recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) with ExtractAarTransform
+Transforming recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) with AarResourcesCompilerTransform
+Transforming recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) with ExtractAarTransform
+Transforming recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) with AarResourcesCompilerTransform
+Transforming customview-1.1.0.aar (androidx.customview:customview:1.1.0) with ExtractAarTransform
+Transforming customview-1.1.0.aar (androidx.customview:customview:1.1.0) with AarResourcesCompilerTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarResourcesCompilerTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarResourcesCompilerTransform
+Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with ExtractAarTransform
+Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with AarResourcesCompilerTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with ExtractAarTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarResourcesCompilerTransform
+Transforming lifecycle-livedata-core-ktx-2.8.7.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7) with ExtractAarTransform
+Transforming lifecycle-livedata-core-ktx-2.8.7.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-viewmodel-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.7) with ExtractAarTransform
+Transforming lifecycle-viewmodel-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.7) with ExtractAarTransform
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.7) with ExtractAarTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-livedata-2.8.7.aar (androidx.lifecycle:lifecycle-livedata:2.8.7) with ExtractAarTransform
+Transforming lifecycle-livedata-2.8.7.aar (androidx.lifecycle:lifecycle-livedata:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-viewmodel-ktx-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7) with ExtractAarTransform
+Transforming lifecycle-viewmodel-ktx-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-process-2.8.7.aar (androidx.lifecycle:lifecycle-process:2.8.7) with ExtractAarTransform
+Transforming lifecycle-process-2.8.7.aar (androidx.lifecycle:lifecycle-process:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-livedata-core-2.8.7.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.7) with ExtractAarTransform
+Transforming lifecycle-livedata-core-2.8.7.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7) with ExtractAarTransform
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7) with AarResourcesCompilerTransform
+Transforming lifecycle-viewmodel-savedstate-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7) with ExtractAarTransform
+Transforming lifecycle-viewmodel-savedstate-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7) with AarResourcesCompilerTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with ExtractAarTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarResourcesCompilerTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarResourcesCompilerTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarResourcesCompilerTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with ExtractAarTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarResourcesCompilerTransform
+Transforming cardview-1.0.0.aar (androidx.cardview:cardview:1.0.0) with ExtractAarTransform
+Transforming cardview-1.0.0.aar (androidx.cardview:cardview:1.0.0) with AarResourcesCompilerTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarResourcesCompilerTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarResourcesCompilerTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarResourcesCompilerTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarResourcesCompilerTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarResourcesCompilerTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with ExtractAarTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with AarResourcesCompilerTransform
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with ExtractAarTransform
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with AarResourcesCompilerTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with ExtractAarTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with AarResourcesCompilerTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarResourcesCompilerTransform
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugResources' as it is up-to-date.
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 6,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :app:compileDebugKotlin FAILED
+Transforming viewbinding-8.9.3.aar (androidx.databinding:viewbinding:8.9.3) with AarToClassTransform
+Transforming material-1.12.0.aar (com.google.android.material:material:1.12.0) with AarToClassTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with AarToClassTransform
+Transforming constraintlayout-2.0.1.aar (androidx.constraintlayout:constraintlayout:2.0.1) with AarToClassTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarToClassTransform
+Transforming viewpager2-1.0.0.aar (androidx.viewpager2:viewpager2:1.0.0) with AarToClassTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarToClassTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarToClassTransform
+Transforming activity-1.9.3.aar (androidx.activity:activity:1.9.3) with AarToClassTransform
+Transforming activity-ktx-1.9.3.aar (androidx.activity:activity-ktx:1.9.3) with AarToClassTransform
+Transforming drawerlayout-1.1.1.aar (androidx.drawerlayout:drawerlayout:1.1.1) with AarToClassTransform
+Transforming coordinatorlayout-1.1.0.aar (androidx.coordinatorlayout:coordinatorlayout:1.1.0) with AarToClassTransform
+Transforming dynamicanimation-1.0.0.aar (androidx.dynamicanimation:dynamicanimation:1.0.0) with AarToClassTransform
+Transforming recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) with AarToClassTransform
+Transforming recyclerview-1.1.0.aar (androidx.recyclerview:recyclerview:1.1.0) with AarToClassTransform
+Transforming transition-1.5.0.aar (androidx.transition:transition:1.5.0) with AarToClassTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarToClassTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarToClassTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarToClassTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarToClassTransform
+Transforming customview-1.1.0.aar (androidx.customview:customview:1.1.0) with AarToClassTransform
+Transforming customview-1.1.0.aar (androidx.customview:customview:1.1.0) with AarToClassTransform
+Transforming customview-1.1.0.aar (androidx.customview:customview:1.1.0) with AarToClassTransform
+Transforming customview-1.1.0.aar (androidx.customview:customview:1.1.0) with AarToClassTransform
+Transforming legacy-support-core-utils-1.0.0.aar (androidx.legacy:legacy-support-core-utils:1.0.0) with AarToClassTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarToClassTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming lifecycle-livedata-core-ktx-2.8.7.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7) with AarToClassTransform
+Transforming lifecycle-livedata-2.8.7.aar (androidx.lifecycle:lifecycle-livedata:2.8.7) with AarToClassTransform
+Transforming lifecycle-viewmodel-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.7) with AarToClassTransform
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.7) with AarToClassTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.7) with AarToClassTransform
+Transforming lifecycle-livedata-core-2.8.7.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.7) with AarToClassTransform
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7) with AarToClassTransform
+Transforming lifecycle-viewmodel-ktx-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7) with AarToClassTransform
+Transforming lifecycle-viewmodel-savedstate-2.8.7.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7) with AarToClassTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarToClassTransform
+Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with AarToClassTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarToClassTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarToClassTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarToClassTransform
+Transforming cardview-1.0.0.aar (androidx.cardview:cardview:1.0.0) with AarToClassTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarToClassTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarToClassTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with AarToClassTransform
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with AarToClassTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with AarToClassTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarToClassTransform
+Transforming lifecycle-common-jvm-2.8.7.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.7) with IdentityTransform
+Transforming kotlinx-coroutines-core-jvm-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0) with IdentityTransform
+Transforming kotlinx-coroutines-android-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0) with IdentityTransform
+Transforming kotlinx-serialization-core-jvm-1.7.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3) with IdentityTransform
+Transforming kotlinx-serialization-json-jvm-1.7.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.7.3) with IdentityTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Transforming annotation-jvm-1.8.1.jar (androidx.annotation:annotation-jvm:1.8.1) with IdentityTransform
+Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with IdentityTransform
+Transforming kotlin-stdlib-2.0.21.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.21) with IdentityTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Transforming constraintlayout-solver-2.0.1.jar (androidx.constraintlayout:constraintlayout-solver:2.0.1) with IdentityTransform
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugAndroidTestKotlin
+Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming viewbinding-8.9.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming material-1.12.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming appcompat-resources-1.7.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming constraintlayout-2.0.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming appcompat-1.7.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming viewpager2-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming fragment-1.5.4-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming activity-1.9.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming activity-ktx-1.9.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming drawerlayout-1.1.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming coordinatorlayout-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming dynamicanimation-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming recyclerview-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming transition-1.5.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming vectordrawable-animated-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming vectordrawable-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming viewpager-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming customview-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming legacy-support-core-utils-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming loader-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-1.13.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-livedata-core-ktx-2.8.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-common-jvm-2.8.7.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-livedata-2.8.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-viewmodel-2.8.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-viewmodel-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-runtime-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-livedata-core-2.8.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-runtime-ktx-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-viewmodel-ktx-2.8.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-viewmodel-savedstate-2.8.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-ktx-1.13.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming kotlinx-coroutines-core-jvm-1.9.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming kotlinx-coroutines-android-1.9.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming savedstate-ktx-1.2.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming savedstate-1.2.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming annotation-experimental-1.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming kotlinx-serialization-core-jvm-1.7.3.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming kotlinx-serialization-json-jvm-1.7.3.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming cursoradapter-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming cardview-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming versionedparcelable-1.1.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming collection-1.1.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming interpolator-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming documentfile-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming localbroadcastmanager-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming print-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-runtime-2.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-common-2.2.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming annotation-jvm-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming kotlin-stdlib-2.0.21.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming annotations-23.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming resourceinspection-annotation-1.0.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming constraintlayout-solver-2.0.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming android.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-lambda-stubs.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Caching disabled for BuildToolsApiClasspathEntrySnapshotTransform: C:\Users\User\Desktop\nova\nova_core_pack\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar because:
+  Build cache is disabled
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugKotlin' is not up-to-date because:
+  Output property 'classpathSnapshotProperties.classpathSnapshotDir' file C:\Users\User\Desktop\nova\nova_core_pack\app\build\kotlin\compileDebugKotlin\classpath-snapshot has been removed.
+  Output property 'classpathSnapshotProperties.classpathSnapshotDir' file C:\Users\User\Desktop\nova\nova_core_pack\app\build\kotlin\compileDebugKotlin\classpath-snapshot\shrunk-classpath-snapshot.bin has been removed.
+  Output property 'destinationDirectory' file C:\Users\User\Desktop\nova\nova_core_pack\app\build\tmp\kotlin-classes\debug has been removed.
+  and more...
+  and more...
+  and more...
+The input changes require a full rebuild for incremental task ':app:compileDebugKotlin'.
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\kotlin', not found
+file or directory 'C:\Users\User\Desktop\nova\nova_core_pack\app\src\debug\java', not found
+Kotlin source files: C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\device\DeviceBridge.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\model\BotMeta.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\model\InboxMessage.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\ActivityProvider.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\DbModule.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\HttpModule.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\NativeBridge.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\NotifyModule.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\StorageModule.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\nativebridge\UiModule.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\NovaApp.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\prefs\NovaPrefs.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\script\NovaScriptRuntime.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\service\NotificationReplier.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\service\NovaNotificationListenerService.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\store\BotScriptStore.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\store\BotStore.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\store\InboxStore.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\ui\BotsAdapter.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\ui\BotsFragment.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\ui\DashboardFragment.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\ui\EditorActivity.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\ui\LogsFragment.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\ui\MainActivity.kt, C:\Users\User\Desktop\nova\nova_core_pack\app\src\main\java\pics\spear\nova\util\PermissionUtils.kt
+Java source files: C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\ActivityEditorBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\ActivityMainBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\FragmentBotsBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\FragmentDashboardBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\FragmentLogsBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\ItemBotBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\ItemInboxBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\SheetActivityToolsBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\SheetNewBotBinding.java, C:\Users\User\Desktop\nova\nova_core_pack\app\build\generated\data_binding_base_class_source_out\debug\out\pics\spear\nova\databinding\SheetTestMessageBinding.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=C:\Users\User\Desktop\nova\nova_core_pack\app\build\kotlin\compileDebugKotlin\cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=C:\Users\User\Desktop\nova\nova_core_pack\app\build\kotlin\compileDebugKotlin\local-state\build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[C:\Users\User\Desktop\nova\nova_core_pack\app\build\tmp\kotlin-classes\debug, C:\Users\User\Desktop\nova\nova_core_pack\app\build\kotlin\compileDebugKotlin\cacheable, C:\Users\User\Desktop\nova\nova_core_pack\app\build\kotlin\compileDebugKotlin\local-state])
+Finished executing kotlin compiler using DAEMON strategy
+16 actionable tasks: 3 executed, 13 up-to-date
+Watched directory hierarchies: [C:\Users\User\Desktop\nova\nova_core_pack]
