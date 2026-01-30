@@ -1,146 +1,145 @@
-SPEAR Public License (SPL) v2.0
-Copyright (c) 2026 SPEAR, SPEAR34000 
-All rights reserved.
+SPEAR Public License(SPL) v2.0
+저작권 (c) 2026 SPEAR, SPEAR34000 
+모든 권리는 유보되어 있습니다.
 
 ----------------------------------------------------------------
 
-Preamble
+프리블
 
-The SPEAR Public License exists to protect openness, fairness,
-and developer freedom while preventing closed-source exploitation.
+SPEAR Public License는 개방성, 공정성을 보호하기 위해 존재합니다.
+그리고 폐쇄 소스 개발을 방지하면서 개발자의 자유를 보장합니다.
 
-You are free to use this Software, even commercially.
-But anything built on SPEAR must remain open to everyone.
+상업적으로도 이 소프트웨어를 자유롭게 사용할 수 있습니다.
+그러나 SPEAR에 기반을 둔 모든 것은 모든 사람에게 열려 있어야 합니다.
 
-If you build on SPEAR, you stand with SPEAR.
-
-----------------------------------------------------------------
-
-1. Definitions
-
-"Software" means this project and all source code, binaries,
-assets, libraries, documentation, and related materials.
-
-"Derivative Work" means any modified, extended, integrated,
-compiled, distributed, or reused form of the Software.
-
-"Public Source" means complete corresponding source code,
-including build scripts and dependencies, sufficient to rebuild.
-
-"Commercial Use" includes selling, licensing, SaaS, hosting,
-subscriptions, paid services, advertisements, client work,
-or any revenue-generating activity.
-
-"Network Use" means providing the Software through servers,
-bots, APIs, or any online service accessible by users.
+SPEAR를 기반으로 하면 SPEAR와 함께 서게 됩니다.
 
 ----------------------------------------------------------------
 
-2. Permissions
+1. 정의
 
-You are permitted to:
+"소프트웨어"는 이 프로젝트와 모든 소스 코드, 바이너리를 의미합니다.
+자산, 도서관, 문서 및 관련 자료.
 
-- use the Software for any purpose
-- modify the Software
-- distribute the Software
-- sell services or products based on the Software
-- operate bots, servers, SaaS, or applications commercially
+"파생적 작업"은 수정, 확장, 통합,
+소프트웨어의 컴파일, 배포 또는 재사용 형태입니다.
 
-provided that you comply with all obligations below.
+"Public Source"는 완전한 해당 소스 코드를 의미하며,
+스크립트 및 종속성을 구축하는 것을 포함하여 재구축하기에 충분합니다.
 
-----------------------------------------------------------------
+"상업적 사용"에는 판매, 라이선스, SaaS, 호스팅이 포함됩니다.
+구독, 유료 서비스, 광고, 클라이언트 작업,
+또는 수익 창출 활동이 있습니다.
 
-3. Mandatory Copyleft (Source Disclosure)
-
-If you distribute, publish, deploy, or make the Software available
-to users (including Network Use), you MUST:
-
-- provide the complete corresponding source code
-- include build scripts and dependencies
-- make the source publicly accessible at no charge
-- license the entire Derivative Work under this same license
-
-This applies to:
-
-- mobile apps (Android/iOS)
-- bots
-- SaaS platforms
-- servers
-- hosted services
-- APIs
-- any compiled binaries
-
-Closed-source or private forks are NOT permitted.
+"네트워크 사용"은 서버를 통해 소프트웨어를 제공하는 것을 의미합니다.
+봇, API 또는 사용자가 액세스할 수 있는 모든 온라인 서비스입니다.
 
 ----------------------------------------------------------------
 
-4. No Proprietary Relicensing
+2. 허가
 
-You may NOT:
+당신은 다음과 같이 허락받습니다.
 
-- relicense under proprietary terms
-- distribute closed-source versions
-- restrict user freedoms granted by this license
-- add additional legal or technical restrictions
+- 소프트웨어를 어떤 목적으로든 사용하십시오.
+- 소프트웨어 수정
+- 소프트웨어 배포
+- 소프트웨어 기반 서비스 또는 제품 판매
+- 봇, 서버, SaaS 또는 애플리케이션을 상업적으로 운영
 
-All Derivative Works must remain open.
+아래의 모든 의무를 준수하는 경우.
 
 ----------------------------------------------------------------
 
-5. Attribution Requirement (Mandatory)
+3. 의무적 카피레프트(출처 공개)
 
-Any application, software, service, bot, server, or product
-that uses or derives from this Software MUST provide visible attribution.
+소프트웨어를 배포, 게시, 배포 또는 사용할 수 있도록 하는 경우
+사용자에게 (네트워크 사용 포함)해야합니다.
 
-The following text must be displayed in at least one
-publicly accessible location:
+- 해당 소스 코드를 완전하게 제공한다
+- 스크립트 및 종속성 구축 포함
+- 무료로 출처를 공개적으로 액세스할 수 있도록 합니다.
+- 이 동일한 라이센스에 따라 파생 작업 전체를 라이센스합니다.
+
+이것은 다음에 적용됩니다.
+
+- 모바일 앱(Android/iOS)
+- 봇
+- SaaS 플랫폼
+- 서버
+- 호스팅 서비스
+- API
+- 편집된 이진법
+
+폐쇄 소스 또는 개인 포크는 허용되지 않습니다.
+
+----------------------------------------------------------------
+
+4. 독점적 재허가 금지
+
+아닐 수도 있습니다.
+
+- 독점 조건에 따른 유물
+- 폐소스 버전 배포
+- 본 라이센스에 의해 부여된 사용자 자유를 제한합니다.
+- 추가적인 법적 또는 기술적 제한사항 추가
+
+모든 파생 작품은 열려 있어야 합니다.
+
+----------------------------------------------------------------
+
+5. 귀속요건(의무사항)
+
+모든 응용 프로그램, 소프트웨어, 서비스, 봇, 서버 또는 제품
+이 소프트웨어 MUST를 사용하거나 파생된 것은 가시적인 속성을 제공합니다.
+
+다음 텍스트는 적어도 하나로 표시되어야 합니다.
+공개적으로 접근 가능한 위치:
 
 "Powered by SPEAR"
-or
-"Built with SPEAR Technology"
+아니면
+"SPER 기술로 제작"
 
-The attribution must:
+귀속은 다음과 같아야 합니다.
 
-- be reasonably visible
-- not be hidden or obscured
-- not be modified or reworded
-- include a link to: https://spear.pics
+- 합리적으로 보이다
+- 숨김이나 가려지지 않음
+- 수정 또는 수정되지 않음
 
-Acceptable locations include:
+허용 가능한 위치에는 다음이 포함됩니다.
 
-- About page
-- Settings page
-- README
-- Documentation
-- Service description
-- Help/about commands (for bots/CLI)
+- 약 페이지
+- 설정 페이지
+- 리드메
+- 문서화
+- 서비스 설명
+- 도움말/명령어(봇/CLI용)
 
-Removal of attribution is a license violation.
-
-----------------------------------------------------------------
-
-6. Trademark
-
-This license does NOT grant permission to use the names,
-logos, or trademarks of "SPEAR", "Astral", or "Team stend"
-for branding or marketing without written permission.
+귀속을 없애는 것은 면허 위반이다.
 
 ----------------------------------------------------------------
 
-7. Warranty Disclaimer
+6. 상표
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-THE AUTHORS ARE NOT LIABLE FOR ANY DAMAGES OR LOSSES.
-
-----------------------------------------------------------------
-
-8. Termination
-
-Any violation of this license automatically terminates
-all rights granted under this license.
-
-Upon termination, you must cease use and distribution immediately.
+이 라이센스는 이름을 사용할 수 있는 허가를 부여하지 않습니다.
+"SPEAR", "Astral" 또는 "Team stend"의 로고 또는 상표
+서면 허가 없이 브랜딩 또는 마케팅을 위한 것입니다.
 
 ----------------------------------------------------------------
 
-End of License
+7. 보증 면책 조항
+
+소프트웨어는 어떤 종류의 보증도 없이 "있는 그대로" 제공됩니다.
+저자는 손해나 손실에 대해 책임을 지지 않습니다.
+
+----------------------------------------------------------------
+
+8. 종료
+
+이 면허를 위반하면 자동으로 종료됩니다.
+이 라이선스에 따라 부여된 모든 권리.
+
+종료 시 즉시 사용 및 배포를 중단해야 합니다.
+
+----------------------------------------------------------------
+
+라이선스 종료
