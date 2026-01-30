@@ -1,0 +1,146 @@
+SPEAR Public License (SPL) v2.0
+Copyright (c) 2026 SPEAR, SPEAR34000 
+All rights reserved.
+
+----------------------------------------------------------------
+
+Preamble
+
+The SPEAR Public License exists to protect openness, fairness,
+and developer freedom while preventing closed-source exploitation.
+
+You are free to use this Software, even commercially.
+But anything built on SPEAR must remain open to everyone.
+
+If you build on SPEAR, you stand with SPEAR.
+
+----------------------------------------------------------------
+
+1. Definitions
+
+"Software" means this project and all source code, binaries,
+assets, libraries, documentation, and related materials.
+
+"Derivative Work" means any modified, extended, integrated,
+compiled, distributed, or reused form of the Software.
+
+"Public Source" means complete corresponding source code,
+including build scripts and dependencies, sufficient to rebuild.
+
+"Commercial Use" includes selling, licensing, SaaS, hosting,
+subscriptions, paid services, advertisements, client work,
+or any revenue-generating activity.
+
+"Network Use" means providing the Software through servers,
+bots, APIs, or any online service accessible by users.
+
+----------------------------------------------------------------
+
+2. Permissions
+
+You are permitted to:
+
+- use the Software for any purpose
+- modify the Software
+- distribute the Software
+- sell services or products based on the Software
+- operate bots, servers, SaaS, or applications commercially
+
+provided that you comply with all obligations below.
+
+----------------------------------------------------------------
+
+3. Mandatory Copyleft (Source Disclosure)
+
+If you distribute, publish, deploy, or make the Software available
+to users (including Network Use), you MUST:
+
+- provide the complete corresponding source code
+- include build scripts and dependencies
+- make the source publicly accessible at no charge
+- license the entire Derivative Work under this same license
+
+This applies to:
+
+- mobile apps (Android/iOS)
+- bots
+- SaaS platforms
+- servers
+- hosted services
+- APIs
+- any compiled binaries
+
+Closed-source or private forks are NOT permitted.
+
+----------------------------------------------------------------
+
+4. No Proprietary Relicensing
+
+You may NOT:
+
+- relicense under proprietary terms
+- distribute closed-source versions
+- restrict user freedoms granted by this license
+- add additional legal or technical restrictions
+
+All Derivative Works must remain open.
+
+----------------------------------------------------------------
+
+5. Attribution Requirement (Mandatory)
+
+Any application, software, service, bot, server, or product
+that uses or derives from this Software MUST provide visible attribution.
+
+The following text must be displayed in at least one
+publicly accessible location:
+
+"Powered by SPEAR"
+or
+"Built with SPEAR Technology"
+
+The attribution must:
+
+- be reasonably visible
+- not be hidden or obscured
+- not be modified or reworded
+- include a link to: https://spear.pics
+
+Acceptable locations include:
+
+- About page
+- Settings page
+- README
+- Documentation
+- Service description
+- Help/about commands (for bots/CLI)
+
+Removal of attribution is a license violation.
+
+----------------------------------------------------------------
+
+6. Trademark
+
+This license does NOT grant permission to use the names,
+logos, or trademarks of "SPEAR", "Astral", or "Team stend"
+for branding or marketing without written permission.
+
+----------------------------------------------------------------
+
+7. Warranty Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+THE AUTHORS ARE NOT LIABLE FOR ANY DAMAGES OR LOSSES.
+
+----------------------------------------------------------------
+
+8. Termination
+
+Any violation of this license automatically terminates
+all rights granted under this license.
+
+Upon termination, you must cease use and distribution immediately.
+
+----------------------------------------------------------------
+
+End of License
