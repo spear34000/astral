@@ -1,7 +1,3 @@
-# Nova Bot 개발 레퍼런스
-
-Nova는 JavaScript 또는 Python으로 메신저 봇을 개발하고 실행할 수 있는 Android 기반 플랫폼입니다.
-
 # Astral Bot 개발 레퍼런스
 
 Astral은 JavaScript 또는 Python으로 메신저 봇을 개발하고 실행할 수 있는 Android 기반 플랫폼입니다.
