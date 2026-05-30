@@ -33,15 +33,15 @@ fun LogsScreen(logStore: LogStore) {
                 .padding(top = 52.dp),
         ) {
             SectionHeader(
-                title = "Logs",
-                subtitle = if (logs.isNotEmpty()) "${logs.size} entr${if (logs.size != 1) "ies" else "y"}"
+                title = "로그",
+                subtitle = if (logs.isNotEmpty()) "총 ${logs.size}개"
                 else null,
                 action = {
                     if (logs.isNotEmpty()) {
                         IconButton(onClick = { scope.launch { logStore.clear() } }) {
                             Icon(
                                 Icons.Default.DeleteSweep,
-                                "Clear",
+                                "지우기",
                                 tint = ErrorRed,
                                 modifier = Modifier.size(22.dp),
                             )
@@ -57,8 +57,8 @@ fun LogsScreen(logStore: LogStore) {
                     icon = {
                         Icon(Icons.Default.Terminal, null, tint = TextTertiary, modifier = Modifier.size(32.dp))
                     },
-                    title = "No logs",
-                    subtitle = "Bot activity and errors will appear here",
+                    title = "로그 없음",
+                    subtitle = "봇의 활동과 오류가 여기에 표시됩니다",
                 )
             } else {
                 LazyColumn(

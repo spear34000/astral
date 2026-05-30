@@ -329,21 +329,21 @@ fun Shimmer(modifier: Modifier = Modifier, shape: Shape = RoundedCornerShape(12.
 
 /** Random creative prompts that cycle. */
 private val vibeQuotes = listOf(
-    "let the code flow through you",
-    "make something that didn't exist before",
-    "every great bot starts with a single line",
-    "your imagination + AI = ✨",
-    "vibe > perfection · ship it",
-    "code is poetry in motion",
-    "what do you want to create today?",
-    "small steps, big magic",
-    "the best time to create is now",
-    "your bot, your rules, your vibe",
-    "from spark to automation",
-    "build cool shit · break things · learn",
-    "think in flows, not just functions",
-    "creation is a conversation",
-    "let the vibes guide your logic",
+    "오늘은 어떤 봇을 만들어볼까요?",
+    "작은 아이디어가 큰 자동화로",
+    "코딩 몰라도 만들 수 있어요",
+    "네모 칸을 연결하면 봇이 완성돼요",
+    "처음은 누구나 초보예요",
+    "그림 그리듯 플로우를 만들어보세요",
+    "실패해도 괜찮아요, 다시 하면 돼요",
+    "봇에게 이름을 지어주세요",
+    "상상한 대로 움직이는 봇을 ✦",
+    "하나씩 배우면 어느새 고수",
+    "지금 시작하는 게 가장 좋은 때",
+    "질문해보세요, 봇이 대신 답해줄 거예요",
+    "작게 시작해서 크게 키워요",
+    "당신만의 특별한 봇을 만들어보세요",
+    "오늘의 삽질은 내일의 꿀팁",
 )
 
 @Composable
@@ -403,7 +403,7 @@ fun PulseText(
 /** A creative prompt card shown on the dashboard. */
 @Composable
 fun VibePrompt(
-    title: String = "today's vibe",
+    title: String = "오늘의 아이디어",
     prompt: String,
     gradient: List<Color> = listOf(AstralPurple, AstralBlue),
     onClick: (() -> Unit)? = null,

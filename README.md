@@ -1,160 +1,144 @@
 # ✦ Astral
 
-**vibe coding framework for KakaoTalk bots**
+**코딩 몰라도 되는 카카오톡 봇 만들기**
 
-Astral은 카카오톡 봇을 만들기 위한 안드로이드 경량 프레임워크입니다.  
-**JavaScript (Node.js)** 또는 **Python**으로 스크립트를 작성하거나, **Flow 편집기**로 시각적으로 제작할 수 있습니다.
+Astral은 안드로이드 폰에서 카카오톡 봇을 만들 수 있게 해주는 앱입니다.  
+**코드를 한 줄도 몰라도** 비주얼 편집기로 봇을 만들 수 있고,  
+나중에 배워서 직접 코드를 짤 수도 있어요.
 
-> "let the code flow through you" — astral
-
----
-
-## ✨ 특징
-
-- **제로 헤비 의존성** — WebView V8 (시스템 내장) + Jython (순수 Java Python)
-- **듀얼 런타임** — Node.js API (require/module/Buffer/process) + Python 2.7
-- **비주얼 플로우 빌더** — 드래그 앤 드롭 노드 편집기, JS로 컴파일
-- **REST API** — 내장 HTTP 서버 (포트 설정 가능, 인증 토큰, CORS)
-- **플러그인 시스템** — `.atlp` 포맷, 훅 라이프사이클 지원
-- **카카오톡 연동** — NotificationListenerService + 자동 응답
-- **프리미엄 UI** — 유리주의, 파티클 애니메이션, Material 3
-- **바이브 코딩** — 창의적 프롬프트, 영감 인용구, 펄스 UI
+> "코드는 흐르는 거야 — let the code flow" — astral
 
 ---
 
-## 📦 아키텍처
+## ✨ 이걸로 뭐할 수 있나요?
 
-```
-app/
-├── engine/
-│   ├── ScriptEngine.kt      # 멀티-랭귀지 디스패처
-│   ├── NodeRuntime.kt       # WebView V8 + Node.js 폴리필
-│   ├── NodePolyfill.kt      # require/module/Buffer/process/timers
-│   ├── PythonRuntime.kt     # Jython 기반 Python 2.7
-│   ├── Runtime.kt           # Runtime 인터페이스 + enum
-│   ├── FlowCompiler.kt      # 비주얼 플로우 → JavaScript
-│   ├── ApiServer.kt         # REST API (com.sun.net.httpserver)
-│   ├── PluginManager.kt     # .atlp 플러그인 로더 + 훅 시스템
-│   └── BotApi.kt            # 이벤트 버스 + 디바이스 액션
-├── model/                   # Bot, Flow, ChatMessage, LogEntry
-├── service/                 # NotificationListener + 응답
-├── store/                   # JSON 파일 영속성
-└── ui/                      # Compose 화면 + 컴포넌트
-```
+- **자동 응답 봇** — 특정 키워드가 들어오면 자동으로 답장
+- **명령어 봇** — `!help`, `!날씨` 같은 명령어로 동작
+- **플로우 만들기** — 그림 그리듯이 노드 연결해서 봇 제작 (코딩 필요 없음!)
+- **외부 연결** — REST API로 다른 앱이나 PC에서 봇 제어
 
 ---
 
-## 🚀 시작하기
+## 🤔 코딩을 전혀 몰라도 되나요?
 
-### 요구사항
-- Android 8.0+ (API 26)
-- 카카오톡 설치
-- 알림 접근 권한 활성화
+**네!** Astral은 비개발자를 위해 만들어졌어요.
 
-### 빌드
-```bash
-git clone https://github.com/spear34000/astral.git
-cd astral
-./gradlew assembleDebug
-```
+1. **비주얼 플로우** — 네모 칸(노드)을 연결만 하면 봇이 완성돼요
+2. **기본 템플릿** — 봇 만들 때 기본 코드가 자동으로 들어가요
+3. **따라하기 쉬운 UI** — 모든 버튼과 설명이 알기 쉽게 되어있어요
+4. **배우면서 쓸 수 있음** — 코드를 배우고 싶다면, Astral에서 직접 연습할 수 있어요
 
-### 첫 번째 봇
+---
+
+## 📱 설치 방법
+
+1. 이 저장소를 다운로드하거나 빌드해서 APK를 설치하세요
+2. 앱을 실행하고 **알림 접근 권한**을 허용하세요 (카톡 메시지를 읽기 위해 필요)
+3. 봇을 만들고, 카톡에서 테스트해보세요!
+
+> 빌드가 어렵다면, [Releases](https://github.com/spear34000/astral/releases)에서 바로 APK를 받을 수도 있어요.
+
+---
+
+## 🎨 봇 만들기 (코딩 필요 없음)
+
+### 플로우 에디터로 만들기 (추천!)
+1. 아래 탭에서 **Flow** 선택
+2. `+` 버튼 눌러서 노드 추가
+3. 노드를 연결해서 봇 로직 완성
+4. **Compile** 버튼 눌러서 봇 코드 생성
+
+### 봇 목록에서 만들기
+1. 아래 탭에서 **Bots** 선택
+2. `+` 버튼 눌러서 새 봇 생성
+3. 봇 이름 짓고 언어 선택 (JavaScript 추천)
+4. 기본 코드가 자동으로 들어가 있어요, 바로 켜서 테스트!
+
+---
+
+## 📖 간단한 예제
+
+메시지가 오면 자동으로 답장하는 봇:
+
+**JavaScript (Node.js)**
 ```javascript
-// JavaScript / Node.js
 bot.onMessage(function(room, sender, msg, isGroup) {
-    if (msg.includes('hello')) {
-        bot.reply('hi there! ✦');
-    }
+    bot.reply('안녕! 나는 Astral 봇이야 ✦');
 });
 ```
 
+**Python**
 ```python
-# Python
 def on_message(room, sender, msg, is_group):
-    if 'hello' in msg:
-        bot.reply('hi there! ✦')
+    bot.reply('안녕! 나는 Astral 봇이야 ✦')
 
 bot.on_message(on_message)
 ```
 
 ---
 
-## 🌐 REST API
+## 🌐 외부에서 제어하기 (REST API)
 
-| 메서드 | 엔드포인트 | 설명 |
-|--------|-----------|------|
-| GET | `/api/v1/ping` | 상태 확인 |
-| GET | `/api/v1/bots` | 봇 목록 |
-| POST | `/api/v1/bots` | 봇 생성 `{name, language}` |
-| GET | `/api/v1/bots/:id` | 봇 상세 |
-| POST | `/api/v1/bots/:id/toggle` | 봇 켜기/끄기 |
-| DELETE | `/api/v1/bots/:id` | 봇 삭제 |
-| POST | `/api/v1/flows/compile` | 플로우 → 코드 컴파일 |
-| POST | `/api/v1/message` | 메시지 전송 `{room, message}` |
-| GET | `/api/v1/plugins` | 플러그인 목록 |
-| POST | `/api/v1/server/restart` | API 서버 재시작 |
+앱 안에서 설정을 켜면, PC나 다른 기기에서도 봇을 제어할 수 있어요.
 
-기본 포트: `9345` · 인증: `Authorization: Bearer <token>` (선택)
+| 기능 | 주소 | 설명 |
+|------|------|------|
+| 상태 확인 | `GET /api/v1/ping` | 서버가 잘 돌고 있는지 확인 |
+| 봇 목록 | `GET /api/v1/bots` | 등록된 봇들 보기 |
+| 봇 생성 | `POST /api/v1/bots` | 새 봇 만들기 `{name, language}` |
+| 봇 상세 | `GET /api/v1/bots/:id` | 특정 봇 정보 보기 |
+| 봇 켜기/끄기 | `POST /api/v1/bots/:id/toggle` | 봇 켜기 또는 끄기 |
+| 봇 삭제 | `DELETE /api/v1/bots/:id` | 봇 삭제 |
+| 봇 코드 변환 | `POST /api/v1/flows/compile` | 플로우 → 코드 변환 |
+| 메시지 전송 | `POST /api/v1/message` | `{room, message}`로 답장 보내기 |
+| 플러그인 목록 | `GET /api/v1/plugins` | 설치된 플러그인 보기 |
+| 서버 재시작 | `POST /api/v1/server/restart` | API 서버 다시 시작 |
+
+기본 포트: `9345` · 인증: 필요하면 설정에서 토큰 추가 가능
 
 ---
 
-## 🔌 플러그인 포맷 (.atlp)
+## 🔌 플러그인 (고급 기능)
 
-`.atlp`는 ZIP 패키지입니다:
+`.atlp` 파일로 기능을 확장할 수 있어요.  
+앱 실행 시, 특정 이벤트가 발생할 때, 봇이 만들어질 때 등에 동작하는 플러그인을 만들 수 있습니다.
 
 ```
-example.atlp
-├── plugin.json      # 매니페스트
+example.atlp (ZIP 파일)
+├── plugin.json      # 플러그인 정보
 └── main.js          # 플러그인 코드
 ```
 
-### plugin.json
-```json
-{
-  "id": "example",
-  "name": "Example Plugin",
-  "version": "1.0.0",
-  "hooks": ["APP_START", "KAKAO_MESSAGE_RECEIVED"],
-  "main": "main.js"
-}
+---
+
+## 🧠 비주얼 플로우 노드 설명
+
+| 노드 타입 | 색상 | 하는 일 |
+|----------|------|---------|
+| 메시지 감지 | 파랑 | 특정 단어가 들어오면 시작 |
+| 명령어 감지 | 파랑 | `!명령어` 형식이 들어오면 시작 |
+| 답장하기 | 초록 | 채팅방에 메시지 보내기 |
+| 토스트 | 노랑 | 화면에 짧은 메시지 띄우기 |
+| 기다리기 | 빨강 | 지정한 시간(ms)만큼 대기 |
+| 로그 기록 | 보라 | 로그에 메시지 남기기 |
+| 조건 분기 | 분홍 | 조건에 따라 다른 동작 실행 |
+
+---
+
+## 🏗️ 앱 구조 (개발자용)
+
+```
+app/
+├── engine/      # 봇 엔진, API 서버, 플러그인 시스템
+├── model/       # 데이터 모델
+├── service/     # 카톡 알림 감지 + 응답
+├── store/       # 데이터 저장
+└── ui/          # 화면 UI (Compose)
 ```
 
-### 지원 훅
-`APP_START`, `APP_STOP`, `BOT_CREATED`, `BOT_DELETED`,  
-`BOT_ENABLED`, `BOT_DISABLED`, `KAKAO_MESSAGE_RECEIVED`, `FLOW_COMPILED`
-
----
-
-## 🎨 Bot API
-
-| 메서드 | 설명 |
-|--------|------|
-| `bot.reply(text)` | 현재 채팅방에 메시지 전송 |
-| `bot.toast(text)` | Android 토스트 표시 |
-| `bot.vibrate(ms)` | 디바이스 진동 |
-| `bot.log(text)` | Astral 로그에 기록 |
-| `bot.getName()` | 봇 이름 반환 |
-| `bot.onMessage(fn)` | 모든 메시지 처리 |
-| `bot.onCommand(name, fn)` | 접두사 명령어 처리 |
-| `bot.setPrefix([p])` | 명령어 접두사 설정 (기본: `!`, `/`) |
-
-**Node.js 전용:**
-- `require('events')`, `require('util')`, `require('path')`
-- `Buffer`, `process`, `setTimeout`, `setInterval`
-
----
-
-## 🧠 비주얼 플로우 노드
-
-| 타입 | 색상 | 설명 |
-|------|------|------|
-| On Message | 파랑 | 키워드 감지 |
-| On Command | 파랑 | `!명령어` 감지 |
-| Reply | 초록 | 메시지 전송 |
-| Toast | 노랑 | 토스트 표시 |
-| Delay | 빨강 | 대기 (ms) |
-| Log | 보라 | 로그 출력 |
-| Condition | 분홍 | 조건 분기 |
+- **JavaScript 엔진**: 안드로이드 내장 WebView V8 사용 (별도 라이브러리 없음)
+- **Python 엔진**: Jython (순수 Java 파이썬) 사용
+- **API 서버**: 안드로이드 내장 HttpServer 사용
 
 ---
 
@@ -162,4 +146,4 @@ example.atlp
 
 GNU General Public License v3.0 — [LICENSE](LICENSE)
 
-이 프로그램은 자유 소프트웨어입니다. Free Software Foundation이 발표한 GNU General Public License v3 (또는 이후 버전) 하에 재배포 및 수정할 수 있습니다.
+이 프로그램은 자유 소프트웨어입니다. 누구나 배포하고 수정할 수 있습니다.

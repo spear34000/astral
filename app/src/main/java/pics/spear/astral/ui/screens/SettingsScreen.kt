@@ -37,7 +37,7 @@ fun SettingsScreen(
         Column(
             modifier = Modifier.fillMaxSize().padding(top = 52.dp),
         ) {
-            SectionHeader("Settings", subtitle = "Framework configuration")
+            SectionHeader("설정", subtitle = "앱 환경설정")
 
             Spacer(Modifier.height(20.dp))
 
@@ -47,8 +47,8 @@ fun SettingsScreen(
                     Icons.Default.NotificationsActive,
                     if (hasNotifAccess) AstralEmerald else ErrorRed,
                     if (hasNotifAccess) AstralEmerald.copy(alpha = 0.15f) else ErrorRed.copy(alpha = 0.15f),
-                    "Notification Access",
-                    if (hasNotifAccess) "Enabled — listening for KakaoTalk" else "Required for bot functionality",
+                    "카톡 알림 접근",
+                    if (hasNotifAccess) "켜짐 — 카톡 메시지를 감지 중입니다" else "꺼짐 — 봇이 동작하려면 필요합니다",
                     onClick = {
                         if (!hasNotifAccess) {
                             ctx.startActivity(Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS))
@@ -67,9 +67,9 @@ fun SettingsScreen(
                                 }
                                 Spacer(Modifier.width(14.dp))
                                 Column(Modifier.weight(1f)) {
-                                    Text("API Server", fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = TextPrimary)
+                                    Text("외부 접속 (API)", fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = TextPrimary)
                                     Text(
-                                        if (apiEnabled) "Running on port $apiPort" else "External access disabled",
+                                        if (apiEnabled) "$apiPort 포트에서 실행 중" else "외부 접속 꺼짐",
                                         fontSize = 13.sp, color = if (apiEnabled) AstralEmerald else TextTertiary,
                                     )
                                 }
@@ -84,7 +84,7 @@ fun SettingsScreen(
                                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                                     Text("http://127.0.0.1:${apiPort}/api/v1", fontSize = 11.sp, color = AstralCyan, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace)
                                     TextButton(onClick = { showPortInput = !showPortInput }) {
-                                        Text("Change Port", color = AstralBlue, fontSize = 12.sp)
+                                        Text("포트 변경", color = AstralBlue, fontSize = 12.sp)
                                     }
                                 }
                                 if (showPortInput) {
@@ -92,7 +92,7 @@ fun SettingsScreen(
                                     OutlinedTextField(
                                         value = apiPort,
                                         onValueChange = { apiPort = it.filter { c -> c.isDigit() }.take(5) },
-                                        label = { Text("Port") },
+                                        label = { Text("포트") },
                                         singleLine = true,
                                         colors = OutlinedTextFieldDefaults.colors(
                                             focusedTextColor = TextPrimary, unfocusedTextColor = TextPrimary,
@@ -103,7 +103,7 @@ fun SettingsScreen(
                                         modifier = Modifier.fillMaxWidth(),
                                     )
                                     Spacer(Modifier.height(8.dp))
-                                    GlowButton("Restart Server", {
+                                    GlowButton("서버 재시작", {
                                         apiPort.toIntOrNull()?.let { apiServer.restart(it) }
                                         showPortInput = false
                                     })
@@ -122,8 +122,8 @@ fun SettingsScreen(
                         }
                         Spacer(Modifier.width(14.dp))
                         Column(Modifier.weight(1f)) {
-                            Text("Vibe Mode", fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = TextPrimary)
-                            PulseText("creativity mode · active", color = AstralBlue, fontSize = 11.sp)
+                            Text("바이브 모드", fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = TextPrimary)
+                            PulseText("창의력 모드 · 켜짐", color = AstralBlue, fontSize = 11.sp)
                         }
                         AstralSwitch(checked = true) {}
                     }
@@ -132,27 +132,27 @@ fun SettingsScreen(
                 Spacer(Modifier.height(10.dp))
 
                 // Info items
-                SettingItem(Icons.Default.Info, AstralBlue, AstralBlue.copy(alpha = 0.15f), "Version", "Astral 2.0.0", onClick = {})
-                SettingItem(Icons.Default.Code, AstralPurple, AstralPurple.copy(alpha = 0.15f), "Open Source", "github.com/spear34000/astral", onClick = {})
-                SettingItem(Icons.Default.Palette, AstralEmerald, AstralEmerald.copy(alpha = 0.15f), "Theme", "Cosmic Dark", onClick = {})
+                SettingItem(Icons.Default.Info, AstralBlue, AstralBlue.copy(alpha = 0.15f), "버전", "Astral 2.0.0", onClick = {})
+                SettingItem(Icons.Default.Code, AstralPurple, AstralPurple.copy(alpha = 0.15f), "오픈소스", "github.com/spear34000/astral", onClick = {})
+                SettingItem(Icons.Default.Palette, AstralEmerald, AstralEmerald.copy(alpha = 0.15f), "테마", "우주 다크 모드", onClick = {})
             }
 
             Spacer(Modifier.height(36.dp))
-            SectionHeader("API Reference", subtitle = "REST endpoints for external apps")
+            SectionHeader("외부 접속 주소 (API)", subtitle = "PC나 다른 앱에서 봇을 제어하는 주소")
             Spacer(Modifier.height(12.dp))
 
             Column(Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 listOf(
-                    "GET  /api/v1/ping" to "Health check",
-                    "GET  /api/v1/bots" to "List all bots",
-                    "POST /api/v1/bots" to "Create bot {name, language}",
-                    "GET  /api/v1/bots/:id" to "Get bot details",
-                    "POST /api/v1/bots/:id/toggle" to "Toggle bot on/off",
-                    "DELETE /api/v1/bots/:id" to "Delete bot",
-                    "POST /api/v1/flows/compile" to "Compile flow → JS",
-                    "POST /api/v1/message" to "Send reply {room, message}",
-                    "GET  /api/v1/plugins" to "List registered plugins",
-                    "POST /api/v1/server/restart" to "Restart with {port}",
+                    "GET  /api/v1/ping" to "서버 상태 확인",
+                    "GET  /api/v1/bots" to "봇 목록 보기",
+                    "POST /api/v1/bots" to "봇 생성 {name, language}",
+                    "GET  /api/v1/bots/:id" to "봇 상세 정보",
+                    "POST /api/v1/bots/:id/toggle" to "봇 켜기/끄기",
+                    "DELETE /api/v1/bots/:id" to "봇 삭제",
+                    "POST /api/v1/flows/compile" to "플로우 → 코드 변환",
+                    "POST /api/v1/message" to "메시지 전송 {room, message}",
+                    "GET  /api/v1/plugins" to "플러그인 목록",
+                    "POST /api/v1/server/restart" to "서버 재시작 {port}",
                 ).forEach { (endpoint, desc) ->
                     Row {
                         Text(endpoint, fontSize = 11.sp, color = AstralCyan, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace)

@@ -96,7 +96,7 @@ fun FlowScreen(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         IconButton(onClick = onBack) {
-                            Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
+                            Icon(Icons.Default.ArrowBack, "뒤로", tint = TextPrimary)
                         }
                         Column(Modifier.weight(1f)) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -105,10 +105,10 @@ fun FlowScreen(
                                     fontWeight = FontWeight.Bold, fontSize = 17.sp, color = TextPrimary,
                                 )
                                 Spacer(Modifier.width(8.dp))
-                                PulseText("flow", color = AstralCyan, fontSize = 10.sp)
+                                PulseText("비주얼 편집", color = AstralCyan, fontSize = 10.sp)
                             }
                             Text(
-                                text = "${flow.nodes.size} nodes  ·  ${flow.connections.size} connections",
+                                text = "노드 ${flow.nodes.size}개  ·  연결 ${flow.connections.size}개",
                                 fontSize = 12.sp, color = TextTertiary,
                             )
                         }
@@ -124,7 +124,7 @@ fun FlowScreen(
                         }) {
                             Icon(Icons.Default.Code, null, tint = Blue60, modifier = Modifier.size(18.dp))
                             Spacer(Modifier.width(4.dp))
-                            Text("Compile", color = Blue60)
+                            Text("코드 변환", color = Blue60)
                         }
                         TextButton(onClick = { showAddMenu = true }) {
                             Icon(Icons.Default.Add, null, tint = Emerald60, modifier = Modifier.size(22.dp))
@@ -149,7 +149,7 @@ fun FlowScreen(
                         ) {
                             Text("✦", color = AstralEmerald, fontSize = 16.sp)
                             Spacer(Modifier.width(8.dp))
-                            Text("compiled successfully — keep the vibes flowing", color = TextPrimary, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+                            Text("코드 변환 완료! 이제 봇에서 사용할 수 있어요 ✦", color = TextPrimary, fontSize = 12.sp, fontWeight = FontWeight.Medium)
                         }
                     }
                 }
@@ -352,12 +352,12 @@ private fun AddNodeSheet(onDismiss: () -> Unit, onAdd: (NodeType) -> Unit) {
         },
     ) {
         Column(Modifier.padding(horizontal = 24.dp).padding(bottom = 32.dp)) {
-            Text("Add Node", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = TextPrimary)
+            Text("노드 추가", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = TextPrimary)
             Spacer(Modifier.height(4.dp))
-            Text("Choose a node type to add to the canvas", color = TextSecondary, fontSize = 14.sp)
+            Text("원하는 동작을 선택해서 플로우에 추가하세요", color = TextSecondary, fontSize = 14.sp)
             Spacer(Modifier.height(16.dp))
 
-            Text("Triggers", fontWeight = FontWeight.SemiBold, color = TextTertiary, fontSize = 13.sp)
+            Text("시작 조건", fontWeight = FontWeight.SemiBold, color = TextTertiary, fontSize = 13.sp)
             Spacer(Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 NodeTypeChip(NodeType.TRIGGER_MESSAGE) { onAdd(NodeType.TRIGGER_MESSAGE) }
@@ -365,7 +365,7 @@ private fun AddNodeSheet(onDismiss: () -> Unit, onAdd: (NodeType) -> Unit) {
             }
 
             Spacer(Modifier.height(16.dp))
-            Text("Actions", fontWeight = FontWeight.SemiBold, color = TextTertiary, fontSize = 13.sp)
+            Text("실행 동작", fontWeight = FontWeight.SemiBold, color = TextTertiary, fontSize = 13.sp)
             Spacer(Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 NodeTypeChip(NodeType.ACTION_REPLY) { onAdd(NodeType.ACTION_REPLY) }
@@ -375,7 +375,7 @@ private fun AddNodeSheet(onDismiss: () -> Unit, onAdd: (NodeType) -> Unit) {
             }
 
             Spacer(Modifier.height(16.dp))
-            Text("Logic", fontWeight = FontWeight.SemiBold, color = TextTertiary, fontSize = 13.sp)
+            Text("조건/분기", fontWeight = FontWeight.SemiBold, color = TextTertiary, fontSize = 13.sp)
             Spacer(Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 NodeTypeChip(NodeType.LOGIC_CONDITION) { onAdd(NodeType.LOGIC_CONDITION) }
@@ -429,25 +429,25 @@ private fun NodePropertySheet(
             Spacer(Modifier.height(12.dp))
 
             when (node.type) {
-                NodeType.TRIGGER_MESSAGE -> PropField("Keyword filter", node.props["keyword"] ?: "", { v ->
+                NodeType.TRIGGER_MESSAGE -> PropField("감지할 키워드", node.props["keyword"] ?: "", { v ->
                     onUpdate(node.copy(props = node.props + ("keyword" to v)))
                 })
-                NodeType.TRIGGER_COMMAND -> PropField("Command name", node.props["command"] ?: "start", { v ->
+                NodeType.TRIGGER_COMMAND -> PropField("명령어 이름", node.props["command"] ?: "start", { v ->
                     onUpdate(node.copy(props = node.props + ("command" to v)))
                 })
-                NodeType.ACTION_REPLY -> PropField("Reply message", node.props["message"] ?: "Hello!", { v ->
+                NodeType.ACTION_REPLY -> PropField("답장 내용", node.props["message"] ?: "안녕하세요!", { v ->
                     onUpdate(node.copy(props = node.props + ("message" to v)))
                 })
-                NodeType.ACTION_TOAST -> PropField("Toast text", node.props["message"] ?: "Hello!", { v ->
+                NodeType.ACTION_TOAST -> PropField("토스트 내용", node.props["message"] ?: "안녕하세요!", { v ->
                     onUpdate(node.copy(props = node.props + ("message" to v)))
                 })
-                NodeType.ACTION_DELAY -> PropField("Delay (ms)", node.props["ms"] ?: "1000", { v ->
+                NodeType.ACTION_DELAY -> PropField("대기 시간 (ms)", node.props["ms"] ?: "1000", { v ->
                     onUpdate(node.copy(props = node.props + ("ms" to v)))
                 })
-                NodeType.ACTION_LOG -> PropField("Log message", node.props["message"] ?: "log", { v ->
+                NodeType.ACTION_LOG -> PropField("로그 메시지", node.props["message"] ?: "로그", { v ->
                     onUpdate(node.copy(props = node.props + ("message" to v)))
                 })
-                NodeType.LOGIC_CONDITION -> PropField("Condition (JS)", node.props["condition"] ?: "msg.includes('hi')", { v ->
+                NodeType.LOGIC_CONDITION -> PropField("조건식", node.props["condition"] ?: "msg.includes('hi')", { v ->
                     onUpdate(node.copy(props = node.props + ("condition" to v)))
                 })
             }
@@ -480,10 +480,10 @@ private fun PropField(label: String, value: String, onChange: (String) -> Unit) 
 private fun defaultProps(type: NodeType): Map<String, String> = when (type) {
     NodeType.TRIGGER_MESSAGE -> mapOf("keyword" to "")
     NodeType.TRIGGER_COMMAND -> mapOf("command" to "start")
-    NodeType.ACTION_REPLY -> mapOf("message" to "Hello!")
-    NodeType.ACTION_TOAST -> mapOf("message" to "Hello!")
+    NodeType.ACTION_REPLY -> mapOf("message" to "안녕하세요!")
+    NodeType.ACTION_TOAST -> mapOf("message" to "안녕하세요!")
     NodeType.ACTION_DELAY -> mapOf("ms" to "1000")
-    NodeType.ACTION_LOG -> mapOf("message" to "log")
+    NodeType.ACTION_LOG -> mapOf("message" to "로그 기록")
     NodeType.LOGIC_CONDITION -> mapOf("condition" to "msg.includes('hi')")
 }
 

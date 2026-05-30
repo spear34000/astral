@@ -4,13 +4,13 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 enum class NodeType(val label: String, val icon: String, val color: Long) {
-    TRIGGER_MESSAGE("On Message", "message", 0xFF6C8CFF),
-    TRIGGER_COMMAND("On Command", "command", 0xFF6C8CFF),
-    ACTION_REPLY("Reply", "reply", 0xFF34D399),
-    ACTION_TOAST("Toast", "toast", 0xFFFBBF24),
-    ACTION_DELAY("Delay", "delay", 0xFFF87171),
-    ACTION_LOG("Log", "log", 0xFFA78BFA),
-    LOGIC_CONDITION("Condition", "condition", 0xFFF472B6),
+    TRIGGER_MESSAGE("메시지 감지", "message", 0xFF6C8CFF),
+    TRIGGER_COMMAND("명령어 감지", "command", 0xFF6C8CFF),
+    ACTION_REPLY("답장하기", "reply", 0xFF34D399),
+    ACTION_TOAST("토스트", "toast", 0xFFFBBF24),
+    ACTION_DELAY("기다리기", "delay", 0xFFF87171),
+    ACTION_LOG("로그 기록", "log", 0xFFA78BFA),
+    LOGIC_CONDITION("조건 분기", "condition", 0xFFF472B6),
 }
 
 @Serializable

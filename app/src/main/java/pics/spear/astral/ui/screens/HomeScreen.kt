@@ -77,7 +77,7 @@ fun HomeScreen(
                                 color = TextPrimary, letterSpacing = (-1).sp,
                             )
                             Text(
-                                text = "vibe coding framework · v2.0",
+                                text = "카톡 봇 만들기 · v2.0",
                                 fontSize = 12.sp, color = AstralCyan.copy(alpha = 0.8f),
                                 fontFamily = FontFamily.Monospace, letterSpacing = 0.5.sp,
                             )
@@ -94,7 +94,7 @@ fun HomeScreen(
             // ── Daily Prompt ──────────────────────────────
             Box(Modifier.padding(horizontal = 20.dp)) {
                 VibePrompt(
-                    prompt = "create a bot that replies with a random cat fact when someone says \"cat\"",
+                    prompt = "\"야옹\"이라고 치면 고양이 사진을 보내주는 봇을 만들어보세요",
                     gradient = listOf(AstralPurple, AstralBlue),
                     onClick = onNavigateToBots,
                 )
@@ -105,26 +105,25 @@ fun HomeScreen(
             // ── Stats Grid (2x2) ─────────────────────────
             Row(Modifier.padding(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 StatCard(
-                    Modifier.weight(1f), "Active Bots", "${activeAnim.toInt()}",
+                    Modifier.weight(1f), "켜진 봇", "${activeAnim.toInt()}",
                     { Icon(Icons.Default.PlayArrow, null, tint = AstralEmerald, modifier = Modifier.size(20.dp)) },
                     accent = AstralEmerald,
                 )
                 StatCard(
-                    Modifier.weight(1f), "Total Bots", "${totalAnim.toInt()}",
+                    Modifier.weight(1f), "전체 봇", "${totalAnim.toInt()}",
                     { Icon(Icons.Default.SmartToy, null, tint = AstralBlue, modifier = Modifier.size(20.dp)) },
                     accent = AstralBlue,
-                )
             }
             Spacer(Modifier.height(10.dp))
             Row(Modifier.padding(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 StatCard(
-                    Modifier.weight(1f), "Errors", "$errorCount",
+                    Modifier.weight(1f), "오류", "$errorCount",
                     { Icon(Icons.Default.BugReport, null, tint = ErrorRed, modifier = Modifier.size(20.dp)) },
                     accent = ErrorRed,
                 )
                 StatCard(
-                    Modifier.weight(1f), "API",
-                    if (apiEnabled) ":$apiPort" else "Off",
+                    Modifier.weight(1f), "외부 접속",
+                    if (apiEnabled) ":$apiPort" else "꺼짐",
                     {
                         Icon(
                             if (apiEnabled) Icons.Default.Api else Icons.Default.ApiOff,
@@ -143,18 +142,18 @@ fun HomeScreen(
             Box(Modifier.padding(horizontal = 20.dp)) {
                 GlassCard(glow = true) {
                     Column(Modifier.padding(16.dp)) {
-                        Text("System Status", fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 16.sp)
+                        Text("시스템 상태", fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 16.sp)
                         Spacer(Modifier.height(12.dp))
-                        StatusRow(Icons.Default.NotificationsActive, "Notification Listener",
-                            if (hasNotif) "Active" else "Inactive",
+                        StatusRow(Icons.Default.NotificationsActive, "카톡 알림 감지",
+                            if (hasNotif) "켜짐" else "꺼짐",
                             if (hasNotif) AstralEmerald else ErrorRed)
                         Spacer(Modifier.height(8.dp))
-                        StatusRow(Icons.Default.Api, "API Server",
-                            if (apiEnabled) "Running on port $apiPort" else "Stopped",
+                        StatusRow(Icons.Default.Api, "외부 접속 (API)",
+                            if (apiEnabled) "$apiPort 포트에서 실행 중" else "꺼짐",
                             if (apiEnabled) AstralEmerald else TextTertiary)
                         Spacer(Modifier.height(8.dp))
-                        StatusRow(Icons.Default.Memory, "Script Engine",
-                            "WebView V8 · ${bots.size} bot${if (bots.size != 1) "s" else ""} loaded",
+                        StatusRow(Icons.Default.Memory, "봇 엔진",
+                            "봇 ${bots.size}개 로드됨",
                             AstralBlue)
                     }
                 }
@@ -166,12 +165,12 @@ fun HomeScreen(
             Box(Modifier.padding(horizontal = 20.dp)) {
                 GlassCard {
                     Column(Modifier.padding(16.dp)) {
-                        Text("Quick Actions", fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 16.sp)
+                        Text("바로가기", fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 16.sp)
                         Spacer(Modifier.height(12.dp))
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                            ActionChip(Icons.Default.Add, "New Bot", AstralEmerald, onNavigateToBots)
-                            ActionChip(Icons.Default.AccountTree, "New Flow", AstralPurple, onNavigateToFlow)
-                            ActionChip(Icons.Default.Terminal, "Logs", AstralBlue, onNavigateToLogs)
+                            ActionChip(Icons.Default.Add, "새 봇", AstralEmerald, onNavigateToBots)
+                            ActionChip(Icons.Default.AccountTree, "플로우", AstralPurple, onNavigateToFlow)
+                            ActionChip(Icons.Default.Terminal, "로그", AstralBlue, onNavigateToLogs)
                         }
                     }
                 }
@@ -184,7 +183,7 @@ fun HomeScreen(
                 Box(Modifier.padding(horizontal = 20.dp)) {
                     GlassCard {
                         Column(Modifier.padding(16.dp)) {
-                            Text("Recent Activity", fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 16.sp)
+                            Text("최근 활동", fontWeight = FontWeight.Bold, color = TextPrimary, fontSize = 16.sp)
                             Spacer(Modifier.height(12.dp))
                             logs.takeLast(4).reversed().forEach { entry ->
                                 Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -217,11 +216,11 @@ fun HomeScreen(
             // ── Bots Preview ─────────────────────────────
             if (bots.isNotEmpty()) {
                 SectionHeader(
-                    "Your Bots",
-                    subtitle = "${bots.size} bot${if (bots.size != 1) "s" else ""} · ${activeCount} active",
+                    "내 봇",
+                    subtitle = "${bots.size}개 · ${activeCount}개 켜짐",
                     action = {
                         TextButton(onClick = onNavigateToBots) {
-                            Text("See All", color = AstralBlue, fontWeight = FontWeight.SemiBold)
+                            Text("전체보기", color = AstralBlue, fontWeight = FontWeight.SemiBold)
                         }
                     },
                 )
@@ -234,9 +233,9 @@ fun HomeScreen(
             } else {
                 EmptyState(
                     icon = { Icon(Icons.Default.SmartToy, null, tint = TextTertiary, modifier = Modifier.size(28.dp)) },
-                    title = "No bots yet",
-                    subtitle = "Create your first bot or use the visual Flow builder",
-                    action = { GlowButton("Create Bot", onNavigateToBots) },
+                    title = "아직 봇이 없어요",
+                    subtitle = "봇을 만들거나 플로우 편집기로 만들어보세요",
+                    action = { GlowButton("봇 만들기", onNavigateToBots) },
                 )
             }
 

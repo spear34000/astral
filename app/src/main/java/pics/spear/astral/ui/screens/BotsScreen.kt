@@ -45,8 +45,8 @@ fun BotsScreen(
                     .padding(top = 52.dp),
             ) {
                 SectionHeader(
-                    title = "Bots",
-                    subtitle = if (bots.isNotEmpty()) "${bots.size} bot${if (bots.size != 1) "s" else ""}"
+                    title = "봇 목록",
+                    subtitle = if (bots.isNotEmpty()) "총 ${bots.size}개"
                     else null,
                 )
                 Spacer(Modifier.height(8.dp))
@@ -56,9 +56,9 @@ fun BotsScreen(
                         icon = {
                             Icon(Icons.Default.SmartToy, null, tint = Blue60, modifier = Modifier.size(32.dp))
                         },
-                        title = "No bots yet",
-                        subtitle = "Create your first bot to start automating KakaoTalk",
-                        action = { GlowGradientButton("Create Bot") { showCreate = true } },
+                        title = "아직 봇이 없어요",
+                        subtitle = "아래 버튼을 눌러 첫 봇을 만들어보세요",
+                        action = { GlowGradientButton("봇 만들기") { showCreate = true } },
                     )
                 } else {
                     LazyColumn(
@@ -149,16 +149,16 @@ private fun CreateBotSheet(onDismiss: () -> Unit, onCreate: (String, String) -> 
                 .padding(horizontal = 24.dp)
                 .padding(bottom = 40.dp),
         ) {
-            Text("Create Bot", fontWeight = FontWeight.Bold, fontSize = 22.sp, color = TextPrimary)
+            Text("새 봇 만들기", fontWeight = FontWeight.Bold, fontSize = 22.sp, color = TextPrimary)
             Spacer(Modifier.height(4.dp))
-            Text("Give your bot a name and choose a language", color = TextSecondary, fontSize = 14.sp)
+            Text("봇 이름을 정하고, 사용할 언어를 선택하세요", color = TextSecondary, fontSize = 14.sp)
             Spacer(Modifier.height(20.dp))
 
             OutlinedTextField(
                 value = name,
                 onValueChange = { name = it },
-                label = { Text("Bot Name") },
-                placeholder = { Text("e.g. MyHelper", color = TextTertiary) },
+                label = { Text("봇 이름") },
+                placeholder = { Text("예: 도우미봇", color = TextTertiary) },
                 singleLine = true,
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedTextColor = TextPrimary,
@@ -174,7 +174,7 @@ private fun CreateBotSheet(onDismiss: () -> Unit, onCreate: (String, String) -> 
             )
 
             Spacer(Modifier.height(16.dp))
-            Text("Language", fontWeight = FontWeight.SemiBold, color = TextPrimary, fontSize = 15.sp)
+            Text("언어 선택", fontWeight = FontWeight.SemiBold, color = TextPrimary, fontSize = 15.sp)
             Spacer(Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 LangChip("javascript", lang == "javascript") { lang = "javascript" }
@@ -182,7 +182,7 @@ private fun CreateBotSheet(onDismiss: () -> Unit, onCreate: (String, String) -> 
             }
             Spacer(Modifier.height(24.dp))
             GlowGradientButton(
-                text = "Create Bot",
+                text = "봇 만들기",
                 onClick = { onCreate(name.trim(), lang) },
                 enabled = name.isNotBlank(),
                 modifier = Modifier.fillMaxWidth(),
@@ -213,32 +213,34 @@ private fun LangChip(label: String, selected: Boolean, onClick: () -> Unit) {
 }
 
 private fun getDefaultScript(lang: String): String = when (lang) {
-    "python" -> """# Astral Bot - Python
-# Responds to all messages
-bot.onMessage(lambda room, sender, msg, is_group: bot.reply("Hello! I received: " + msg))
+    "python" -> """# Astral Bot
+# 모든 메시지에 반응
+bot.onMessage(lambda room, sender, msg, is_group: bot.reply("안녕! 나는 " + bot.getName() + "이야 ✦"))
 
-# Command handler
-@bot.command("help")
-def help(room, sender, msg, is_group, args):
-    bot.reply("Available commands: !help, !ping")
+# 명령어 예시
+def cmd_help(room, sender, msg, is_group, args):
+    bot.reply("사용 가능한 명령어: !help, !ping")
 
-@bot.command("ping")
-def ping(room, sender, msg, is_group, args):
-    bot.reply("Pong!")
+bot.on_command("help", cmd_help)
+
+def cmd_ping(room, sender, msg, is_group, args):
+    bot.reply("Pong! 🏓")
+
+bot.on_command("ping", cmd_ping)
 """
-    else -> """// Astral Bot - JavaScript
-// Responds to all messages
+    else -> """// Astral Bot
+// 모든 메시지에 반응
 bot.onMessage(function(room, sender, msg, isGroup) {
-    bot.reply("Hello! I received: " + msg);
+    bot.reply("안녕! 나는 " + bot.getName() + "이야 ✦");
 });
 
-// Command handlers
+// 명령어 예시
 bot.onCommand("help", function(room, sender, msg, isGroup, args) {
-    bot.reply("Available commands: !help, !ping");
+    bot.reply("사용 가능한 명령어: !help, !ping");
 });
 
 bot.onCommand("ping", function(room, sender, msg, isGroup, args) {
-    bot.reply("Pong!");
+    bot.reply("Pong! 🏓");
 });
 """
 }

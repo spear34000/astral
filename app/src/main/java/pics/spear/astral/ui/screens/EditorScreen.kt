@@ -45,12 +45,12 @@ fun EditorScreen(
 
     val fancyPlaceholders = remember {
         listOf(
-            "// make something magical ✨",
-            "// what if your bot could dream?",
-            "// drop some vibes here...",
-            "// bot.onMessage = creativity",
-            "// start typing your vision",
-            "// code flows best when it flows free",
+            "// 자유롭게 코드를 작성해보세요 ✦",
+            "// 여기에 봇의 동작을 정의합니다",
+            "// 예: bot.reply('안녕!') 하고 답장해요",
+            "// bot.onMessage로 메시지를 처리해요",
+            "// 코드가 흐르는 대로 두세요",
+            "// 모르면 그냥 켜보세요! 기본 코드 있어요",
         )
     }
 
@@ -88,7 +88,7 @@ fun EditorScreen(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, "Back", tint = TextPrimary)
+                        Icon(Icons.Default.ArrowBack, "뒤로", tint = TextPrimary)
                     }
 
                     Column(Modifier.weight(1f)) {
@@ -100,12 +100,12 @@ fun EditorScreen(
                         )
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(
-                                text = "${bot.language.replaceFirstChar { it.uppercase() }}  ·  $lineCount lines",
+                                text = "${bot.language.replaceFirstChar { it.uppercase() }}  ·  $lineCount 줄",
                                 fontSize = 12.sp,
                                 color = TextTertiary,
                             )
                             Spacer(Modifier.width(8.dp))
-                            PulseText("vibe coding", color = AstralPurple, fontSize = 10.sp)
+                            PulseText("코딩 중", color = AstralPurple, fontSize = 10.sp)
                         }
                     }
 
@@ -117,7 +117,7 @@ fun EditorScreen(
                     ) { isSaved ->
                         if (isSaved) {
                             Text(
-                                text = "saved ✦",
+                                text = "저장됨 ✦",
                                 fontSize = 11.sp,
                                 color = AstralEmerald,
                                 fontWeight = FontWeight.Medium,
@@ -135,7 +135,7 @@ fun EditorScreen(
                     }) {
                         Icon(
                             Icons.Default.Save,
-                            "Save",
+                            "저장",
                             tint = if (saved) AstralEmerald else TextSecondary,
                             modifier = Modifier.size(22.dp),
                         )
@@ -145,7 +145,7 @@ fun EditorScreen(
                     IconButton(onClick = { showVibeTip = !showVibeTip }) {
                         Icon(
                             Icons.Default.TipsAndUpdates,
-                            "Tips",
+                            "팁",
                             tint = if (showVibeTip) AstralPurple else TextTertiary,
                             modifier = Modifier.size(20.dp),
                         )
@@ -156,7 +156,7 @@ fun EditorScreen(
             // Vibe tip
             if (showVibeTip) {
                 VibeTip(
-                    tip = "Tip: You can use bot.reply(), bot.toast(), bot.log() — and require() for Node.js modules",
+                    tip = "도움말: bot.reply()로 답장하고, bot.toast()로 토스트를 띄워요. 봇 이름은 bot.getName()으로 확인!",
                     visible = true,
                     onDismiss = { showVibeTip = false },
                 )

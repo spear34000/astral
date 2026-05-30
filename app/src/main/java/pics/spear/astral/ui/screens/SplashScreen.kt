@@ -101,7 +101,7 @@ fun SplashScreen(onFinished: () -> Unit) {
                 )
 
                 Text(
-                    text = "KakaoTalk Bot Platform",
+                    text = "카카오톡 봇 만들기",
                     fontSize = 14.sp,
                     color = TextSecondary.copy(alpha = progress.value * 0.7f),
                 )
