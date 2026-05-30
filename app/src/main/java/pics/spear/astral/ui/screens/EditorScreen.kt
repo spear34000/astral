@@ -1,6 +1,9 @@
 package pics.spear.astral.ui.screens
 
+import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -8,20 +11,17 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Save
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
@@ -43,8 +43,35 @@ fun EditorScreen(
     val scope = rememberCoroutineScope()
     var saved by remember { mutableStateOf(false) }
 
+    val fancyPlaceholders = remember {
+        listOf(
+            "// make something magical ✨",
+            "// what if your bot could dream?",
+            "// drop some vibes here...",
+            "// bot.onMessage = creativity",
+            "// start typing your vision",
+            "// code flows best when it flows free",
+        )
+    }
+
     val scrollState = rememberScrollState()
     val lineCount = script.count { it == '\n' } + 1
+
+    // Animated vibe glow on the editor
+    val editorGlow by rememberInfiniteTransition(label = "eg").animateFloat(
+        initialValue = 0.02f, targetValue = 0.06f,
+        animationSpec = infiniteRepeatable(tween(2000), repeatMode = RepeatMode.Reverse),
+        label = "egl",
+    )
+
+    // Cycling placeholder
+    val placeholderIdx by rememberInfiniteTransition(label = "ph").animateFloat(
+        initialValue = 0f, targetValue = (fancyPlaceholders.size - 1).toFloat(),
+        animationSpec = infiniteRepeatable(tween(12000), repeatMode = RepeatMode.Restart),
+        label = "phi",
+    )
+
+    var showVibeTip by remember { mutableStateOf(true) }
 
     AstralScreen {
         Column(modifier = Modifier.fillMaxSize()) {
@@ -71,19 +98,33 @@ fun EditorScreen(
                             fontSize = 17.sp,
                             color = TextPrimary,
                         )
-                        Text(
-                            text = "${bot.language.replaceFirstChar { it.uppercase() }}  ·  $lineCount lines",
-                            fontSize = 12.sp,
-                            color = TextTertiary,
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = "${bot.language.replaceFirstChar { it.uppercase() }}  ·  $lineCount lines",
+                                fontSize = 12.sp,
+                                color = TextTertiary,
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            PulseText("vibe coding", color = AstralPurple, fontSize = 10.sp)
+                        }
                     }
 
                     // Save status
-                    Text(
-                        text = if (saved) "Saved" else "",
-                        fontSize = 12.sp,
-                        color = Emerald60,
-                    )
+                    AnimatedContent(
+                        targetState = saved,
+                        transitionSpec = { fadeIn() + scaleIn() togetherWith fadeOut() + scaleOut() },
+                        label = "saved",
+                    ) { isSaved ->
+                        if (isSaved) {
+                            Text(
+                                text = "saved ✦",
+                                fontSize = 11.sp,
+                                color = AstralEmerald,
+                                fontWeight = FontWeight.Medium,
+                                fontFamily = FontFamily.Monospace,
+                            )
+                        }
+                    }
 
                     IconButton(onClick = {
                         scope.launch {
@@ -95,11 +136,30 @@ fun EditorScreen(
                         Icon(
                             Icons.Default.Save,
                             "Save",
-                            tint = if (saved) Emerald60 else TextSecondary,
+                            tint = if (saved) AstralEmerald else TextSecondary,
                             modifier = Modifier.size(22.dp),
                         )
                     }
+
+                    // Vibe tip toggle
+                    IconButton(onClick = { showVibeTip = !showVibeTip }) {
+                        Icon(
+                            Icons.Default.TipsAndUpdates,
+                            "Tips",
+                            tint = if (showVibeTip) AstralPurple else TextTertiary,
+                            modifier = Modifier.size(20.dp),
+                        )
+                    }
                 }
+            }
+
+            // Vibe tip
+            if (showVibeTip) {
+                VibeTip(
+                    tip = "Tip: You can use bot.reply(), bot.toast(), bot.log() — and require() for Node.js modules",
+                    visible = true,
+                    onDismiss = { showVibeTip = false },
+                )
             }
 
             // Line count bar + editor
@@ -133,12 +193,23 @@ fun EditorScreen(
                     }
                 }
 
-                // Editor area
+                // Editor area with animated glow border
                 Box(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxHeight()
-                        .background(SpaceSurfaceVariant.copy(alpha = 0.5f)),
+                        .background(SpaceSurfaceVariant.copy(alpha = 0.5f))
+                        .border(
+                            width = 0.5.dp,
+                            brush = Brush.horizontalGradient(
+                                listOf(
+                                    AstralBlue.copy(alpha = editorGlow),
+                                    AstralPurple.copy(alpha = editorGlow * 0.7f),
+                                    Color.Transparent,
+                                )
+                            ),
+                            shape = RoundedCornerShape(0.dp),
+                        ),
                 ) {
                     BasicTextField(
                         value = script,
@@ -154,13 +225,13 @@ fun EditorScreen(
                             fontFamily = FontFamily.Monospace,
                             lineHeight = 22.sp,
                         ),
-                        cursorBrush = SolidColor(Blue60),
+                        cursorBrush = SolidColor(AstralBlue),
                         decorationBox = { innerTextField ->
                             if (script.isEmpty()) {
                                 Text(
-                                    text = "// Write your bot script here...",
+                                    text = fancyPlaceholders[placeholderIdx.toInt() % fancyPlaceholders.size],
                                     style = TextStyle(
-                                        color = TextTertiary.copy(alpha = 0.5f),
+                                        color = TextTertiary.copy(alpha = 0.4f),
                                         fontSize = 14.sp,
                                         fontFamily = FontFamily.Monospace,
                                         lineHeight = 22.sp,

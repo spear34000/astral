@@ -63,6 +63,9 @@ dependencies {
     // Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
 
+    // Python engine (Jython — Python 2.7 in pure Java)
+    implementation("org.python:jython-standalone:2.7.3")
+
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 

@@ -1,1 +1,3 @@
 -keep class kotlinx.serialization.** { *; }
+-keep class com.sun.net.httpserver.** { *; }
+-keep class org.python.** { *; }

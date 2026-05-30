@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -22,6 +23,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
+import pics.spear.astral.engine.ApiServer
 import pics.spear.astral.engine.ScriptEngine
 import pics.spear.astral.service.AstralNotificationListener
 import pics.spear.astral.service.BotApiProvider
@@ -37,6 +39,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var botStore: BotStore
     private lateinit var logStore: LogStore
     private lateinit var scriptEngine: ScriptEngine
+    private lateinit var apiServer: ApiServer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +49,7 @@ class MainActivity : ComponentActivity() {
         InboxStore(this)
         logStore = LogStore(this)
         scriptEngine = ScriptEngine(this, botStore, logStore, BotApiProvider.getInstance(this))
+        apiServer = ApiServer(botStore, scriptEngine, BotApiProvider.getInstance(this))
 
         scriptEngine.initialize()
         botStore.bots.value.filter { it.enabled }.forEach { scriptEngine.startBot(it) }
@@ -70,7 +74,7 @@ class MainActivity : ComponentActivity() {
                 if (showSplash) {
                     SplashScreen(onFinished = { showSplash = false })
                 } else {
-                    AstralNavHost(botStore = botStore, logStore = logStore)
+                    AstralNavHost(botStore = botStore, logStore = logStore, apiServer = apiServer)
                 }
             }
         }
@@ -78,16 +82,19 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        apiServer.stop()
         scriptEngine.onDestroy()
     }
 }
 
 @Composable
-fun AstralNavHost(botStore: BotStore, logStore: LogStore) {
+fun AstralNavHost(botStore: BotStore, logStore: LogStore, apiServer: ApiServer? = null) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
     val showBottomBar = currentDestination?.route in Screen.tabs.map { it.route }
+
+    val bottomBarHeight = 64.dp
 
     Scaffold(
         containerColor = SpaceBlack,
@@ -97,6 +104,7 @@ fun AstralNavHost(botStore: BotStore, logStore: LogStore) {
                     containerColor = SpaceSurface,
                     contentColor = TextPrimary,
                     tonalElevation = 0.dp,
+                    modifier = Modifier.height(bottomBarHeight),
                 ) {
                     Screen.tabs.forEach { screen ->
                         val selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
@@ -113,12 +121,18 @@ fun AstralNavHost(botStore: BotStore, logStore: LogStore) {
                                 Icon(
                                     imageVector = if (selected) screen.selectedIcon else screen.unselectedIcon,
                                     contentDescription = screen.title,
-                                    tint = if (selected) Blue60 else TextTertiary,
+                                    tint = if (selected) AstralBlue else TextTertiary,
+                                    modifier = Modifier.size(22.dp),
                                 )
                             },
-                            colors = NavigationBarItemDefaults.colors(indicatorColor = Blue60.copy(alpha = 0.12f)),
+                            colors = NavigationBarItemDefaults.colors(indicatorColor = AstralBlue.copy(alpha = 0.1f)),
                             label = {
-                                Text(screen.title, color = if (selected) Blue60 else TextTertiary, style = MaterialTheme.typography.labelSmall)
+                                Text(
+                                    screen.title,
+                                    color = if (selected) AstralBlue else TextTertiary,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
+                                )
                             },
                         )
                     }
@@ -130,15 +144,21 @@ fun AstralNavHost(botStore: BotStore, logStore: LogStore) {
             navController = navController,
             startDestination = Routes.HOME,
             modifier = Modifier.padding(padding),
-            enterTransition = { fadeIn(initialAlpha = 0.3f) },
-            exitTransition = { fadeOut(targetAlpha = 0.3f) },
+            enterTransition = { fadeIn(initialAlpha = 0.2f) },
+            exitTransition = { fadeOut(targetAlpha = 0.2f) },
         ) {
             composable(Routes.HOME) {
                 HomeScreen(
                     botStore = botStore,
+                    logStore = logStore,
+                    apiServer = apiServer,
                     onNavigateToBots = { navController.navigate(Routes.BOTS) },
                     onNavigateToLogs = { navController.navigate(Routes.LOGS) },
+                    onNavigateToFlow = { navController.navigate(Routes.FLOW) },
                 )
+            }
+            composable(Routes.FLOW) {
+                FlowScreen(onBack = { navController.popBackStack() })
             }
             composable(Routes.BOTS) {
                 BotsScreen(
@@ -150,7 +170,7 @@ fun AstralNavHost(botStore: BotStore, logStore: LogStore) {
                 LogsScreen(logStore = logStore)
             }
             composable(Routes.SETTINGS) {
-                SettingsScreen()
+                SettingsScreen(apiServer = apiServer)
             }
             composable(
                 route = Routes.EDITOR,

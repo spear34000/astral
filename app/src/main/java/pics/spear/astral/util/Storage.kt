@@ -24,4 +24,7 @@ object Storage {
 
     fun logsFile(context: Context): File =
         baseDir(context).resolve("logs.json")
+
+    fun pluginsDir(context: Context): File =
+        baseDir(context).resolve("plugins").also { it.mkdirs() }
 }
