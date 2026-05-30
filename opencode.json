@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "astral": {
+      "type": "local",
+      "command": ["node", ".opencode/mcp/astral-server.mjs"],
+      "enabled": true,
+      "env": {
+        "ASTRAL_HOST": "127.0.0.1",
+        "ASTRAL_PORT": "9345",
+        "ASTRAL_TOKEN": ""
+      }
+    }
+  },
+  "skills": {
+    "paths": [".opencode/skills"]
+  }
+}
